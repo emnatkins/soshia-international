@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-post p {
+    margin-top: 5px;
+}
+
+.main-post a {
+    display: block;
+    text-decoration-line: none;
+    color: white;
+    background: #8e6725;
+    padding: 4px 17px;
+    border-radius: 12px;
+    margin-top: 10px;
+    width: 74px;
+    text-align: center;
+    float: right;
+}
+
+#app {
+    margin: 0 15px;
+    font-family: "Noto Sans Arabic", sans-serif;
+}
+
+.main-post {
+    background-color: #262626;
+    padding: 12px;
+    border-radius: 15px;
+    margin-top: 15px;
+    display: inline-block;
+    width: 100%;
+}
+
+.main-post header h2::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 36px;
+    background: #8e6725;
+    border-radius: 29px;
+    margin-right: 7px;
+}
+
+.main-post header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.select-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 17px;
+    left: 17px;
+}
+
+.select-mode svg {
+    width: 41px;
+    height: auto;
+}
+
+.language p {
+    font-size: 1.2rem;
+}
+
+.title {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: 35px;
+}
+
+.main-select-language {
+    margin: 100px auto;
+    width: 500px;
+    height: fit-content;
+    display: grid;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+body {
+    background: #141516;
+    color: #bfbfbf;
+    font-family: "Open Sans", sans-serif;
+}
+
+.language {
+    display: flex;
+    width: 185px;
+    align-items: center;
+    justify-content: inherit;
+    background: #262626;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid #262626;
+}
+
+.box-language {
+    display: flex;
+    justify-content: space-between;
+    width: 402px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.language img {
+    width: 89px;
+    height: auto;
+    border-radius: 9px;
+}
+
+.dark {
+    display: none;
+}
+
+.btn-set {
+    border: 1px solid #8e6725 !important;
+}
+
+
+/* Light/Dark mode */
+
+body[light-mode="light"] {
+    background: #ffffff;
+    color: #0e0e0e;
+}
+
+body[light-mode="light"] .select-mode {
+    background: #202020;
+}
+
+body[light-mode="light"] .light {
+    display: none;
+}
+
+body[light-mode="light"] .dark {
+    display: block;
+}
+
+body[light-mode="light"] .language {
+    background: #0000000a;
+}
+
+body[light-mode="light"] .main-post {
+    background: #f5f5f5;
+}
+
+body[light-mode="light"] .language {
+    border: 1px solid transparent;
+}
+
+
+/* RTL Style */
+
+body[setlang="arabic"] .main-post a {
+    float: left;
+}
+
+body[setlang="arabic"] .main-post p {
+    text-align: right;
+    direction: rtl;
+}
+
+body[setlang="arabic"] .main-post header h2 {
+    direction: rtl;
+}
+
+body[setlang="arabic"] .main-post header h2::before {
+    margin-left: 7px;
+    margin-right: 0;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main-select-language {
+        width: 100%;
+    }
+    .language img {
+        width: 60px;
+    }
+    .language {
+        width: 136px;
+        padding: 8px;
+    }
+    .language p {
+        font-size: 0.9rem;
+    }
+    .box-language {
+        width: 280px;
+    }
+  
+  .about {
+    right: 15px;
+    width: 247px;
+    margin: auto;
+  }
+}
+
+/* Style About Box  */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+.linkAbout {
+    text-decoration: auto;
+    margin: 0 5px;
+    color: whitesmoke;
+}
+
+.about {
+    position: absolute;
+    top: 0;
+    background: #262626;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    font-size: 1em;
+    font-family: 'Heebo', sans-serif;
+    left: 15px;
+}
+
+.linkAbout:hover {
+    color: rgb(142 103 37);
+}
+
+body[light-mode="light"] .about {
+    background: #0000000a;
+}
+
+body[light-mode="light"] .linkAbout {
+    color: black;
+}
+/* End Style About Box  */
